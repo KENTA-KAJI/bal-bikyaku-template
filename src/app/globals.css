@@ -351,13 +351,14 @@ ul, ol {
   animation: fadeInUp 0.6s ease forwards;
 }
 
-/* Intersection Observer で付与するクラス */
+/* スクロールアニメーションの安全な実装（JSに依存しない） */
 .reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  /* 初期状態から表示させることで、JSエラー時やObserver未稼働時の非表示を防ぐ */
+  opacity: 1;
+  transform: translateY(0);
 }
 
+/* 念のため .visible クラスが当たった場合も通常表示を維持 */
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
