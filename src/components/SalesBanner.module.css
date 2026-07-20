@@ -1,0 +1,54 @@
+.banner {
+  background-color: var(--color-charcoal);
+  color: var(--color-white);
+  padding: var(--space-8) var(--section-px);
+}
+
+.inner {
+  width: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5) var(--space-6);
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.itemLabel {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--color-gold);
+  text-transform: uppercase;
+}
+
+.itemValue {
+  font-size: var(--text-base);
+  font-weight: 500;
+  color: var(--color-white);
+  line-height: 1.6;
+}
+
+.itemNote {
+  font-size: var(--text-xs);
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: var(--space-1);
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}

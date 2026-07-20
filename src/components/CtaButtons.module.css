@@ -1,0 +1,148 @@
+.wrapper {
+  width: 100%;
+}
+
+.previewMsg {
+  text-align: center;
+  padding: var(--space-6);
+  background-color: var(--color-bg-alt);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+}
+
+.previewDate {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.previewNote {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.btnGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.priceCard {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  text-align: center;
+}
+
+.memberCard {
+  border: 2px solid var(--color-gold);
+}
+
+.memberLogoWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--space-4);
+}
+
+.priceLabel {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-2);
+}
+
+.price {
+  font-family: var(--font-serif);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-5);
+}
+
+.price span {
+  font-size: var(--text-base);
+  font-weight: 400;
+}
+
+.priceGold {
+  color: var(--color-gold);
+}
+
+.ctaBtn {
+  margin-bottom: var(--space-4);
+}
+
+.memberNote {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  text-align: left;
+  margin-top: var(--space-3);
+}
+
+.closedMsg {
+  text-align: center;
+  padding: var(--space-8);
+  background-color: var(--color-bg-alt);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+}
+
+.closedText {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.closedNote {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-top: var(--space-3);
+}
+
+/* Sticky variant */
+.stickyInner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  width: 100%;
+}
+
+.stickyBtns {
+  display: flex;
+  gap: var(--space-3);
+  width: 100%;
+}
+
+.stickyBtn {
+  flex: 1;
+  min-height: 48px;
+  font-size: var(--text-sm);
+  padding: 0 var(--space-4);
+}
+
+.stickyStatus {
+  text-align: center;
+  width: 100%;
+}
+
+.stickyStatusText {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+@media (min-width: 768px) {
+  .btnGroup {
+    flex-direction: row;
+    gap: var(--space-6);
+  }
+
+  .priceCard {
+    flex: 1;
+  }
+}

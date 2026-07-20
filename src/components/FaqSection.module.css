@@ -1,0 +1,62 @@
+.section {}
+
+.accordion {}
+
+.answer {
+  font-size: var(--text-base);
+  line-height: 1.85;
+  color: var(--color-text-secondary);
+}
+
+.contact {
+  margin-top: var(--space-10);
+  padding: var(--space-8) var(--space-6);
+  background-color: var(--color-white);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.contactTitle {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-6);
+}
+
+.contactLinks {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+.contactLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-base);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--transition-fast);
+  min-height: 48px;
+  padding: var(--space-2) var(--space-4);
+}
+
+.contactLink:hover {
+  color: var(--color-gold);
+}
+
+.contactIcon {
+  font-size: var(--text-lg);
+}
+
+@media (min-width: 640px) {
+  .contactLinks {
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--space-8);
+  }
+}

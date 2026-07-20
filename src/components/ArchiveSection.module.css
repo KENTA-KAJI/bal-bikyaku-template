@@ -1,0 +1,26 @@
+.section {}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  font-size: var(--text-base);
+  line-height: 1.85;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-6);
+}
+
+.note {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  font-size: var(--text-base);
+  line-height: 1.85;
+  color: var(--color-text-secondary);
+  border-left: 3px solid var(--color-charcoal);
+}
+
+.note strong {
+  color: var(--color-text-primary);
+  font-weight: 700;
+}
