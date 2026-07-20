@@ -37,10 +37,13 @@ export default function PricingSection({ data }: PricingSectionProps) {
           受講料金
         </h2>
         <div className={styles.note}>
-          <ul role="list">
-            <li>全4回セットのみ。各回の単発受講はありません。</li>
-            <li>支払いは一括払いのみです。</li>
+          <p className={styles.includesTitle}>受講料に含まれるもの</p>
+          <ul role="list" className={styles.includesList}>
+            <li>全4回の対面実技（各回約5時間・合計約20時間）</li>
+            <li>申込者限定の事前講義動画（2本）</li>
+            <li>全4回の収録アーカイブ（視聴期限なし）</li>
           </ul>
+          <p className={styles.paymentNote}>※全4回セットのみ（単発受講なし）。お支払いはクレジットカード一括払いのみです。</p>
         </div>
 
         <CtaButtons

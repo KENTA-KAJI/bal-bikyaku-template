@@ -1,18 +1,17 @@
 import { seminarData } from "@/data/seminarData";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import SalesBanner from "@/components/SalesBanner";
-import ProblemSection from "@/components/ProblemSection";
-import WhyNotEnough from "@/components/WhyNotEnough";
-import ConceptSection from "@/components/ConceptSection";
+import ShortOverview from "@/components/ShortOverview";
+import IntroSection from "@/components/IntroSection";
+import PhilosophySection from "@/components/PhilosophySection";
 import TemplateSteps from "@/components/TemplateSteps";
-import WhatYouLearn from "@/components/WhatYouLearn";
+import RoadmapSection from "@/components/RoadmapSection";
 import CurriculumSection from "@/components/CurriculumSection";
-import PreLecture from "@/components/PreLecture";
+import AfterSection from "@/components/AfterSection";
 import LiveValue from "@/components/LiveValue";
-import ArchiveSection from "@/components/ArchiveSection";
+import PreLecture from "@/components/PreLecture";
 import InterviewVideo from "@/components/InterviewVideo";
-import InstructorSection from "@/components/InstructorSection";
+import ArchiveSection from "@/components/ArchiveSection";
 import OverviewSection from "@/components/OverviewSection";
 import PricingSection from "@/components/PricingSection";
 import NotesSection from "@/components/NotesSection";
@@ -33,7 +32,6 @@ export default function Home() {
     recruitmentStart,
     recruitmentEnd,
     salesStateOverride,
-    previewDate,
     generalPrice,
     memberPrice,
     generalStripeUrl,
@@ -41,7 +39,6 @@ export default function Home() {
     youtubeUrl,
     contactEmail,
     contactLine,
-    templateSteps,
     curriculum,
     preLectures,
     faq,
@@ -57,70 +54,46 @@ export default function Home() {
 
   return (
     <>
-      {/* ヘッダー */}
       <Header />
 
-      {/* メインコンテンツ */}
       <main id="main-content">
-        {/* 2. ファーストビュー */}
-        <Hero
-          data={{
-            seminarTitle,
-            seminarSubtitle,
-            format,
-            sessionDuration,
-            capacity,
-            instructor,
-            recruitmentStart,
-            recruitmentEnd,
-            salesStateOverride,
-            previewDate,
-          }}
-        />
+        {/* 1. ファーストビュー */}
+        <Hero />
 
-        {/* 3. 募集期間・定員・開催概要バナー */}
-        <SalesBanner
-          recruitmentStart={recruitmentStart}
-          recruitmentEnd={recruitmentEnd}
-          capacity={capacity}
-          venue={venue}
-          sessionDuration={sessionDuration}
-        />
+        {/* 2. 開催概要の短い帯 */}
+        <ShortOverview />
 
-        {/* 4. このような美脚指導になっていませんか */}
-        <ProblemSection />
+        {/* 3 & 4. 現場への具体的な問題提起 / その場の変化だけでは指導の型にならない理由 */}
+        <IntroSection />
 
-        {/* 5. 手技やエクササイズを増やすだけでは解決しない理由 */}
-        <WhyNotEnough />
+        {/* 5. 講師・渡辺慶輔が考える美脚指導 */}
+        <PhilosophySection />
 
-        {/* 6. 本セミナーのコンセプト */}
-        <ConceptSection />
+        {/* 6 & 7. このセミナーで習得する判断のテンプレート / 6ステップ */}
+        <TemplateSteps />
 
-        {/* 7. 習得する6段階の基本テンプレート */}
-        <TemplateSteps steps={templateSteps} />
+        {/* 8 & 9. なぜその順番で学ぶのか / 全4回のロードマップ */}
+        <RoadmapSection />
 
-        {/* 8. 全4回で身につくこと */}
-        <WhatYouLearn />
-
-        {/* 9. 第1〜4回のカリキュラム */}
+        {/* 10. 各回の詳しいカリキュラム */}
         <CurriculumSection curriculum={curriculum} />
 
-        {/* 10. 申込者限定の事前講義 */}
-        <PreLecture lectures={preLectures} />
+        {/* 11. 全4回を受講した後にできるようになること */}
+        <AfterSection />
 
-        {/* 11. 対面実技で学ぶ価値 */}
+        {/* 12. 少人数10名・対面実技で学ぶ理由 */}
         <LiveValue />
 
-        {/* 12. アーカイブ視聴について */}
-        <ArchiveSection />
+        {/* 13. 申込者限定の事前講義 */}
+        <PreLecture lectures={preLectures} />
 
-        {/* 13. 講師インタビュー動画 */}
+        {/* 14. 講師インタビュー動画 */}
         <InterviewVideo youtubeUrl={youtubeUrl} />
 
-        {/* 14. 講師プロフィール */}
-        <InstructorSection instructor={instructor} />
+        {/* 16. 永久視聴できるアーカイブ (Instructor profile is in 5) */}
+        <ArchiveSection />
 
-        {/* 15. 開催概要 */}
+        {/* 17. 開催概要 */}
         <OverviewSection
           data={{
             seminarTitle,
@@ -135,7 +108,7 @@ export default function Home() {
           }}
         />
 
-        {/* 16. 料金プラン */}
+        {/* 18. 料金 */}
         <PricingSection
           data={{
             generalPrice,
@@ -144,20 +117,20 @@ export default function Home() {
           }}
         />
 
-        {/* 17. 申込み前の注意事項 */}
+        {/* 注意事項 */}
         <NotesSection />
 
-        {/* 18. FAQ */}
+        {/* 19. FAQ */}
         <FaqSection
           faq={faq}
           contactEmail={contactEmail}
           contactLine={contactLine}
         />
 
-        {/* 19. 最終CTA */}
+        {/* 20. 最終CTA */}
         <FinalCta data={salesProps} />
 
-        {/* 20. お問い合わせ・フッター */}
+        {/* 21. お問い合わせ・フッター */}
         <ContactFooter
           contactEmail={contactEmail}
           contactLine={contactLine}

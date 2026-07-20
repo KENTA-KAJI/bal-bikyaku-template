@@ -84,13 +84,11 @@ export default function CurriculumSection({ curriculum }: CurriculumSectionProps
       aria-labelledby="curriculum-title"
     >
       <div className="container">
-        <p className="section-label">全4回のカリキュラム</p>
         <h2 id="curriculum-title" className="section-title">
-          各回で習得する内容
+          詳細なカリキュラム
         </h2>
         <p className="section-lead">
-          各回の詳細はタップして展開できます。
-          長大なカリキュラムを無理なく確認できます。
+          各回の詳しい内容はタップしてご確認ください。
         </p>
         <Accordion>
           {curriculum.map((session) => (

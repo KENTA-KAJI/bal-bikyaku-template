@@ -437,3 +437,34 @@ ul, ol {
     font-size: var(--text-4xl);
   }
 }
+
+/* ============================================================
+   レスポンシブユーティリティ
+   ============================================================ */
+.pc-only {
+  display: none !important;
+}
+.sp-only {
+  display: block !important;
+}
+span.sp-only {
+  display: inline !important;
+}
+br.sp-only {
+  display: block !important;
+}
+
+@media (min-width: 768px) {
+  .pc-only {
+    display: block !important;
+  }
+  span.pc-only {
+    display: inline !important;
+  }
+  br.pc-only {
+    display: block !important;
+  }
+  .sp-only {
+    display: none !important;
+  }
+}

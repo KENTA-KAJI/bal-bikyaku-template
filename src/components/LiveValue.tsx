@@ -1,44 +1,37 @@
+"use client";
 import styles from "./LiveValue.module.css";
-
-const values = [
-  {
-    icon: "01",
-    title: "実技を通して体で理解する",
-    desc: "座学で知識を整理し、すぐに実技で確認します。触れる・動かす・感じるという体験が、知識を実用的な技術へ変えます。",
-  },
-  {
-    icon: "02",
-    title: "少人数だからできる個別フィードバック",
-    desc: "定員10名の少人数制です。参加者一人ひとりに対して、講師が直接フィードバックを行います。",
-  },
-  {
-    icon: "03",
-    title: "疑問をその場で解決できる",
-    desc: "オンライン動画では難しい「その場での質問」が可能です。実際のクライアントケースに関する疑問も、対面だからこそ深く掘り下げられます。",
-  },
-  {
-    icon: "04",
-    title: "参加者同士の実技練習",
-    desc: "受講者同士でペアを組んで実技練習をします。複数の身体を評価・介入することで、感覚が定着します。",
-  },
-];
+import { seminarData } from "@/data/seminarData";
 
 export default function LiveValue() {
   return (
-    <section className={`section section--white ${styles.section}`} aria-labelledby="live-title">
-      <div className="container">
-        <p className="section-label">対面実技で学ぶ価値</p>
-        <h2 id="live-title" className="section-title">
-          なぜオンラインではなく<br />対面実技なのか
-        </h2>
-        <div className={styles.grid}>
-          {values.map((v) => (
-            <div key={v.icon} className={styles.item}>
-              <span className={styles.num}>{v.icon}</span>
-              <h3 className={styles.title}>{v.title}</h3>
-              <p className={styles.desc}>{v.desc}</p>
-            </div>
-          ))}
+    <section className={styles.section}>
+      <div className="container reveal">
+        <div className={styles.header}>
+          <h2 className={styles.title}>
+            動画では伝わらない感覚を
+            <br className="sp-only" />
+            少人数で確実に身につける
+          </h2>
+          <p className={styles.lead}>
+            動画を見るだけでは、触診の位置や圧、関節を動かした感覚、
+            介入前後のわずかな変化までは身につきません。<br />
+            本セミナーは、定員{seminarData.capacity}名の少人数制だからこそ、以下の実践を可能にします。
+          </p>
+        </div>
+
+        <div className={styles.points}>
+          <div className={styles.point}>実際に骨指標を触る</div>
+          <div className={styles.point}>関節の動きを確かめる</div>
+          <div className={styles.point}>評価と介入を繰り返す</div>
+          <div className={styles.point}>講師の手の位置や力加減を見る</div>
+          <div className={styles.point}>自分の評価が合っているか確認する</div>
+          <div className={styles.point}>介入後に変化を再評価する</div>
+        </div>
+
+        <div className={styles.totalTime}>
+          全4回・各回約5時間<br className="sp-only" />
+          <span className="pc-only"> </span>
+          （合計約20時間）の対面実技
         </div>
       </div>
     </section>

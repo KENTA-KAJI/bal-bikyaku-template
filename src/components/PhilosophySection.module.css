@@ -1,0 +1,102 @@
+.section {
+  background-color: var(--color-bg-alt);
+  padding: 100px 0; /* image spans full width, so padding left/right is removed from section, applied to container */
+}
+
+.container {
+  padding: 0 var(--section-px);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: var(--space-12);
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  line-height: 1.6;
+  font-weight: 700;
+  color: var(--color-charcoal);
+  margin-bottom: var(--space-8);
+  letter-spacing: 0.05em;
+}
+
+.text {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: 2;
+  color: var(--color-text-secondary);
+}
+
+.imageWrapper {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto var(--space-8);
+  background-color: var(--color-white);
+  /* The original image has a white background, so this blends nicely */
+}
+
+.profileBox {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 var(--section-px);
+}
+
+.name {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--color-charcoal);
+  margin-bottom: var(--space-2);
+}
+
+.credentials {
+  font-size: var(--text-sm);
+  color: var(--color-gold);
+  font-weight: 600;
+  margin-bottom: var(--space-6);
+  line-height: 1.5;
+}
+
+.bio {
+  font-size: var(--text-sm);
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+}
+
+.bio p {
+  margin-bottom: var(--space-3);
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 140px 0;
+  }
+  .title {
+    font-size: var(--text-3xl);
+    text-align: center;
+  }
+  .text {
+    font-size: var(--text-lg);
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .imageWrapper {
+    margin-bottom: var(--space-10);
+  }
+  .profileBox {
+    text-align: center;
+  }
+  .credentials {
+    font-size: var(--text-base);
+  }
+  .bio {
+    font-size: var(--text-base);
+    text-align: left;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
