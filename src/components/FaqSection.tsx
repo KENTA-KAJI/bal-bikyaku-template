@@ -23,7 +23,14 @@ export default function FaqSection({ faq, contactEmail, contactLine }: FaqSectio
         <Accordion className={styles.accordion}>
           {faq.map((item, i) => (
             <AccordionItem key={i} title={item.question}>
-              <p className={styles.answer}>{item.answer}</p>
+              <p className={styles.answer}>
+                {item.answer.split("BAL STUDIO").map((part, idx, arr) => (
+                  <span key={idx}>
+                    {part}
+                    {idx < arr.length - 1 && <span className="nw">BAL STUDIO</span>}
+                  </span>
+                ))}
+              </p>
             </AccordionItem>
           ))}
         </Accordion>

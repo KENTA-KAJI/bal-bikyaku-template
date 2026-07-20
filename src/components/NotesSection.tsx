@@ -17,9 +17,9 @@ const notes = [
     ],
   },
   {
-    title: "BAL STUDIO会員価格について",
+    title: <><span className="nw">BAL STUDIO</span>会員価格について</>,
     items: [
-      "BAL STUDIO会員価格でお申し込みの場合、申込情報と会員登録情報を確認させていただきます。",
+      <><span className="nw">BAL STUDIO</span>会員価格でお申し込みの場合、申込情報と会員登録情報を確認させていただきます。</>,
       "確認の結果、会員情報と一致しない場合は差額のお支払いをお願いすることがあります。",
     ],
   },
@@ -41,8 +41,8 @@ export default function NotesSection() {
           申込み前の注意事項
         </h2>
         <div className={styles.list}>
-          {notes.map((note) => (
-            <div key={note.title} className={styles.item}>
+          {notes.map((note, idx) => (
+            <div key={idx} className={styles.item}>
               <h3 className={styles.itemTitle}>{note.title}</h3>
               <ul role="list" className={styles.itemList}>
                 {note.items.map((text, i) => (

@@ -16,9 +16,9 @@ export default function PhilosophySection() {
             感覚や見た目だけで終わらせない。
           </h2>
           <p className={styles.text}>
-            理学療法士として身体構造を捉え、<br className="sp-only" />アスレティックトレーナーとして動作を捉える。
+            理学療法士として身体構造を捉え、<br className="sp-only" /><span className="nw">アスレティックトレーナー</span>として動作を捉える。
             <br />
-            二つの視点を持つ渡辺慶輔が、
+            二つの視点を持つ<span className="nw">渡辺慶輔</span>が、
             <br className="sp-only" />
             評価・徒手療法・エクササイズを<br className="sp-only" />
             現場で再現できる一つの流れとして伝えます。

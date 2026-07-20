@@ -65,7 +65,7 @@ export default function PricingSection({ data }: PricingSectionProps) {
               <span>会員価格について</span>
             </div>
             <p>
-              BAL STUDIO会員価格でお申し込みの場合、申込情報（氏名・メールアドレス）とBAL STUDIOの会員登録情報を運営側で照合させていただきます。
+              <span className="nw">BAL STUDIO</span>会員価格でお申し込みの場合、申込情報（氏名・メールアドレス）と<span className="nw">BAL STUDIO</span>の会員登録情報を運営側で照合させていただきます。
             </p>
           </div>
         )}

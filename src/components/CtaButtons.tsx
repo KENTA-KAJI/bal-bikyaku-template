@@ -20,44 +20,44 @@ export default function CtaButtons({
   const generalEnabled = isOpen && generalStripeUrl.length > 0;
   const memberEnabled = isOpen && memberStripeUrl.length > 0;
 
-  const getBtnProps = (isMember: boolean) => {
-    switch (salesState) {
-      case "preview":
-        return {
-          text: "7月29日（水）10:00募集開始",
-          disabled: true,
-          href: undefined,
-        };
-      case "open":
-        const enabled = isMember ? memberEnabled : generalEnabled;
-        return {
-          text: isMember ? "会員価格で申し込む" : "一般価格で申し込む",
-          disabled: !enabled,
-          href: enabled ? (isMember ? memberStripeUrl : generalStripeUrl) : undefined,
-        };
-      case "soldout":
-      case "closed":
-        return {
-          text: salesState === "soldout" ? "満席" : "受付終了",
-          disabled: true,
-          href: undefined,
-        };
-    }
-  };
-
-  const generalBtn = getBtnProps(false);
-  const memberBtn = getBtnProps(true);
-
-  if (variant === "sticky") {
-    return (
-      <div className={styles.stickyInner}>
-        {salesState === "preview" && (
-          <div className={styles.stickyStatus}>
-            <span className={styles.stickyStatusText}>
-              7月29日（水）10:00<br className="sp-only" />募集開始
-            </span>
-          </div>
-        )}
+    const getBtnProps = (isMember: boolean) => {
+      switch (salesState) {
+        case "preview":
+          return {
+            text: <><span className="nw">7月29日（水）</span><span className="nw">10:00募集開始</span></>,
+            disabled: true,
+            href: undefined,
+          };
+        case "open":
+          const enabled = isMember ? memberEnabled : generalEnabled;
+          return {
+            text: isMember ? "会員価格で申し込む" : "一般価格で申し込む",
+            disabled: !enabled,
+            href: enabled ? (isMember ? memberStripeUrl : generalStripeUrl) : undefined,
+          };
+        case "soldout":
+        case "closed":
+          return {
+            text: salesState === "soldout" ? "満席" : "受付終了",
+            disabled: true,
+            href: undefined,
+          };
+      }
+    };
+  
+    const generalBtn = getBtnProps(false);
+    const memberBtn = getBtnProps(true);
+  
+    if (variant === "sticky") {
+      return (
+        <div className={styles.stickyInner}>
+          {salesState === "preview" && (
+            <div className={styles.stickyStatus}>
+              <span className={styles.stickyStatusText}>
+                <span className="nw">7月29日（水）</span><span className="nw">10:00</span><br className="sp-only" /><span className="nw">募集開始</span>
+              </span>
+            </div>
+          )}
         {salesState === "open" && (
           <div className={styles.stickyBtns}>
             <a
@@ -96,7 +96,7 @@ export default function CtaButtons({
       <div className={styles.btnGroup}>
         <div className={styles.priceCard}>
           <p className={styles.priceLabel}>一般価格</p>
-          <p className={styles.price}>66,000円<span className="nw">（税込）</span></p>
+          <p className={styles.price}><span className="nw">66,000円（税込）</span></p>
           <a
             href={generalBtn.href}
             className={`btn btn--primary ${styles.ctaBtn}`}
@@ -117,7 +117,7 @@ export default function CtaButtons({
             />
           </div>
           <p className={styles.priceLabel}>BAL STUDIO会員価格</p>
-          <p className={`${styles.price} ${styles.priceGold}`}>44,000円<span className="nw">（税込）</span></p>
+          <p className={`${styles.price} ${styles.priceGold}`}><span className="nw">44,000円（税込）</span></p>
           <a
             href={memberBtn.href}
             className={`btn btn--gold ${styles.ctaBtn}`}

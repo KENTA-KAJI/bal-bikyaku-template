@@ -32,7 +32,7 @@ export default function InterviewVideo({ youtubeUrl }: InterviewVideoProps) {
               <span className={styles.placeholderIcon} aria-hidden="true">▷</span>
               <p className={styles.placeholderText}>講師インタビュー 近日公開</p>
               <p className={styles.placeholderNote}>
-                渡辺慶輔先生へのインタビュー動画を近日中にこちらへ掲載します。<br />
+                <span className="nw">渡辺慶輔</span>先生へのインタビュー動画を近日中にこちらへ掲載します。<br />
                 公開時はBAL LINEよりお知らせします。
               </p>
             </div>

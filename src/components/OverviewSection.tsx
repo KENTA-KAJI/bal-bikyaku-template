@@ -27,7 +27,7 @@ const rows = (data: OverviewSectionProps["data"]) => [
     label: "募集期間",
     value: (
       <>
-        <span className="nw">2026年7月29日（水）10:00</span> 〜 <span className="nw">8月2日（日）23:59</span>
+        <span className="nw">2026年7月29日（水）</span><span className="nw">10:00</span> 〜 <span className="nw">8月2日（日）</span><span className="nw">23:59</span>
       </>
     ),
   },

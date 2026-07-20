@@ -7,8 +7,8 @@ export default function RoadmapSection() {
       <div className="container reveal">
         <div className={styles.intro}>
           <h2 className={styles.introTitle}>
-            部位別の知識を増やすのではなく、<br />
-            「つながり」を理解するための4日間
+            部位別に覚えるのではなく、<br />
+            「つながり」を理解する4日間
           </h2>
           <p className={styles.introText}>
             本セミナーは、膝・足部・骨盤と独立した3つのテーマを学ぶものではありません。
@@ -31,7 +31,7 @@ export default function RoadmapSection() {
           
           <div className={styles.phase}>
             <div className={styles.phaseHeader}>
-              <span className={styles.phaseSub}>PHASE 02｜FOOT & ANKLE</span>
+              <span className={styles.phaseSub}>PHASE 02｜<span className="nw">FOOT & ANKLE</span></span>
               <h3 className={styles.phaseTitle}>足部・足関節</h3>
             </div>
             <div className={styles.phaseText}>
@@ -41,7 +41,7 @@ export default function RoadmapSection() {
           
           <div className={styles.phase}>
             <div className={styles.phaseHeader}>
-              <span className={styles.phaseSub}>PHASE 03｜PELVIS & HIP</span>
+              <span className={styles.phaseSub}>PHASE 03｜<span className="nw">PELVIS & HIP</span></span>
               <h3 className={styles.phaseTitle}>骨盤・股関節</h3>
             </div>
             <div className={styles.phaseText}>
@@ -51,7 +51,7 @@ export default function RoadmapSection() {
           
           <div className={styles.phase}>
             <div className={styles.phaseHeader}>
-              <span className={styles.phaseSub}>PHASE 04｜INTEGRATION</span>
+              <span className={styles.phaseSub}>PHASE 04｜<span className="nw">INTEGRATION</span></span>
               <h3 className={styles.phaseTitle}>統合</h3>
             </div>
             <div className={styles.phaseText}>
@@ -61,7 +61,8 @@ export default function RoadmapSection() {
         </div>
 
         <p className={styles.integrationNote}>
-          「部位をつなげて、<br className="sp-only" />どこから介入するか判断できるようになる」
+          部位をつなぎ、<br />
+          介入の順番を判断できるようになる。
         </p>
       </div>
     </section>

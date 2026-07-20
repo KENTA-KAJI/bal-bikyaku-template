@@ -40,15 +40,15 @@ export default function FinalCta({ data }: FinalCtaProps) {
 
         {salesState === "preview" && (
           <div className={styles.previewBox}>
-            <p className={styles.previewText}>7月29日（水）10:00 募集開始</p>
-            <p className={styles.previewNote}>募集開始時にBAL LINEよりお知らせします</p>
+            <p className={styles.previewText}><span className="nw">7月29日（水）</span><span className="nw">10:00 募集開始</span></p>
+            <p className={styles.previewNote}>募集開始時に<span className="nw">BAL LINE</span>よりお知らせします</p>
           </div>
         )}
 
         {salesState === "open" && (
           <>
             <p className={styles.period}>
-              募集期間：7月29日（水）10:00 〜 8月2日（日）23:59
+              募集期間：<span className="nw">7月29日（水）</span><span className="nw">10:00</span> 〜 <span className="nw">8月2日（日）</span><span className="nw">23:59</span>
             </p>
             <div className={styles.btnGroup}>
               <a
@@ -57,7 +57,7 @@ export default function FinalCta({ data }: FinalCtaProps) {
                 aria-disabled={!generalEnabled}
                 tabIndex={generalEnabled ? 0 : -1}
               >
-                一般価格（66,000円）で申し込む
+                一般価格 <span className="nw">66,000円（税込）</span> で申し込む
               </a>
               <a
                 href={memberEnabled ? data.memberStripeUrl : undefined}
@@ -65,11 +65,11 @@ export default function FinalCta({ data }: FinalCtaProps) {
                 aria-disabled={!memberEnabled}
                 tabIndex={memberEnabled ? 0 : -1}
               >
-                BAL STUDIO会員価格（44,000円）で申し込む
+                <span className="nw">BAL STUDIO</span>会員価格 <span className="nw">44,000円（税込）</span> で申し込む
               </a>
             </div>
             <p className={styles.note}>
-              ※ BAL STUDIO会員価格でのお申込みは、会員情報の照合が必要です
+              ※ <span className="nw">BAL STUDIO</span>会員価格でのお申込みは、会員情報の照合が必要です
             </p>
           </>
         )}

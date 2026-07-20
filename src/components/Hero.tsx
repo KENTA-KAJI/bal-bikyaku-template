@@ -14,19 +14,19 @@ export default function Hero() {
         <div className={styles.headerText}>
           <span className={styles.englishTitle}>LOWER LIMB ASSESSMENT & INTERVENTION</span>
           <h1 className={styles.mainCopy}>
-            <span className="nw">脚を見て、</span>
-            <br className="sp-only" />
-            <span className="nw">なんとなく外ももを緩める。</span>
+            <span>脚を見て、</span>
+            <br />
+            <span>なんとなく外ももを緩める。</span>
             <br />
             <br className="sp-only" />
-            <span className="nw">そんな美脚指導を終わらせる。</span>
+            <span>そんな美脚指導を終わらせる。</span>
           </h1>
           <p className={styles.subCopy}>
-            <span className="nw">膝・足部・足関節・</span><span className="nw">骨盤・股関節を</span><span className="nw">つなげて評価し、</span>
+            <span>膝・足部・足関節・骨盤・股関節を</span><br className="sp-only" /><span>つなげて評価し、</span>
             <br className="pc-only" />
-            <span className="nw">徒手療法からエクササイズ、</span><span className="nw">再評価までを</span>
+            <span>徒手療法からエクササイズ、</span><br className="sp-only" /><span>再評価までを</span>
             <br className="pc-only" />
-            <span className="nw">一つの流れとして組み立てる</span>
+            <span>一つの流れとして組み立てる</span>
             <br className="sp-only" />
             <span className="nw">全4回実技セミナー</span>
           </p>
@@ -40,7 +40,7 @@ export default function Hero() {
           </h2>
           
           <div className={styles.instructorInfo}>
-            <p className={styles.instructorName}>講師：渡辺慶輔</p>
+            <p className={styles.instructorName}>講師：<span className="nw">渡辺慶輔</span></p>
             <p className={styles.instructorCred}>
               <span className="nw">理学療法士</span>
               <span className="pc-only"> ／ </span>

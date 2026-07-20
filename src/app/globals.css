@@ -36,17 +36,17 @@
   --font-sans: "Noto Sans JP", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN",
     "Yu Gothic Medium", "游ゴシック Medium", sans-serif;
 
-  /* Font sizes (mobile-first, minimum 16px base) */
-  --text-xs: 0.75rem;     /* 12px — 注釈のみ */
-  --text-sm: 0.875rem;    /* 14px */
-  --text-base: 1rem;      /* 16px */
-  --text-md: 1.0625rem;   /* 17px */
-  --text-lg: 1.125rem;    /* 18px */
-  --text-xl: 1.25rem;     /* 20px */
-  --text-2xl: 1.5rem;     /* 24px */
-  --text-3xl: 1.75rem;    /* 28px */
-  --text-4xl: 2rem;       /* 32px */
-  --text-5xl: 2.5rem;     /* 40px */
+  /* Fluid Typography (clamp: min, preferred, max) */
+  --text-xs: clamp(0.7rem, 2vw, 0.75rem);
+  --text-sm: clamp(0.8rem, 2.5vw, 0.875rem);
+  --text-base: clamp(0.95rem, 3vw, 1rem);
+  --text-md: clamp(1rem, 3.5vw, 1.0625rem);
+  --text-lg: clamp(1.05rem, 4vw, 1.125rem);
+  --text-xl: clamp(1.15rem, 5vw, 1.25rem);
+  --text-2xl: clamp(1.15rem, 5vw, 1.5rem);
+  --text-3xl: clamp(1.4rem, 6vw, 1.75rem);
+  --text-4xl: clamp(1.6rem, 7vw, 2rem);
+  --text-5xl: clamp(2rem, 8vw, 2.5rem);
 
   /* Spacing */
   --space-1: 0.25rem;
@@ -63,7 +63,7 @@
   --space-24: 6rem;
 
   /* Section padding (mobile) */
-  --section-px: 1.25rem;
+  --section-px: 1rem;
   --section-py: 3.5rem;
 
   /* Border radius */
@@ -114,6 +114,9 @@ body {
   color-scheme: light;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  word-break: normal;
+  overflow-wrap: break-word;
+  line-break: strict;
 }
 
 .page-wrapper {

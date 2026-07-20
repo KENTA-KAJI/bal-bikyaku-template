@@ -22,8 +22,8 @@ export default function SalesBanner({
           <div className={styles.item}>
             <span className={styles.itemLabel}>募集期間</span>
             <span className={styles.itemValue}>
-              2026年7月29日（水）10:00<br />
-              〜 8月2日（日）23:59
+              <span className="nw">2026年7月29日（水）</span><span className="nw">10:00</span><br />
+              〜 <span className="nw">8月2日（日）</span><span className="nw">23:59</span>
             </span>
             <span className={styles.itemNote}>定員{capacity}名に達し次第、募集終了</span>
           </div>
