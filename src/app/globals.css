@@ -107,14 +107,18 @@ html {
 body {
   font-family: var(--font-sans);
   font-size: var(--text-base);
-  line-height: 1.8;
+  line-height: 1.6;
   color: var(--color-text-primary);
   background-color: var(--color-bg);
   /* ダークモード設定で意図せず色が変わらないようにする */
   color-scheme: light;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.page-wrapper {
   overflow-x: hidden;
+  padding-bottom: 140px; /* スマートフォンの固定CTA用余白 */
 }
 
 /* 横スクロール防止 */
@@ -453,6 +457,9 @@ span.sp-only {
 }
 br.sp-only {
   display: block !important;
+}
+.nw {
+  white-space: nowrap;
 }
 
 @media (min-width: 768px) {

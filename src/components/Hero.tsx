@@ -14,31 +14,38 @@ export default function Hero() {
         <div className={styles.headerText}>
           <span className={styles.englishTitle}>LOWER LIMB ASSESSMENT & INTERVENTION</span>
           <h1 className={styles.mainCopy}>
-            脚を見て、
-            <br />
-            なんとなく外ももを緩める。
+            <span className="nw">脚を見て、</span>
+            <br className="sp-only" />
+            <span className="nw">なんとなく外ももを緩める。</span>
             <br />
             <br className="sp-only" />
-            そんな美脚指導を終わらせる。
+            <span className="nw">そんな美脚指導を終わらせる。</span>
           </h1>
           <p className={styles.subCopy}>
-            膝・足部・足関節・骨盤・股関節を<br className="sp-only" />つなげて評価し、
+            <span className="nw">膝・足部・足関節・</span><span className="nw">骨盤・股関節を</span><span className="nw">つなげて評価し、</span>
             <br className="pc-only" />
-            徒手療法からエクササイズ、再評価までを
+            <span className="nw">徒手療法からエクササイズ、</span><span className="nw">再評価までを</span>
             <br className="pc-only" />
-            一つの流れとして組み立てる<br className="sp-only" />全4回実技セミナー
+            <span className="nw">一つの流れとして組み立てる</span>
+            <br className="sp-only" />
+            <span className="nw">全4回実技セミナー</span>
           </p>
         </div>
         
         <div className={styles.divider}></div>
 
         <div className={styles.seminarInfo}>
-          <h2 className={styles.seminarTitle}>{seminarData.seminarTitle}</h2>
+          <h2 className={styles.seminarTitle}>
+            <span className="nw">美脚指導の</span><span className="nw">テンプレート</span>
+          </h2>
           
           <div className={styles.instructorInfo}>
-            <p className={styles.instructorName}>講師：{seminarData.instructor.name}</p>
+            <p className={styles.instructorName}>講師：渡辺慶輔</p>
             <p className={styles.instructorCred}>
-              {seminarData.instructor.credentials.join(" ／ ")}
+              <span className="nw">理学療法士</span>
+              <span className="pc-only"> ／ </span>
+              <br className="sp-only" />
+              <span className="nw">日本スポーツ協会公認</span><span className="nw">アスレティックトレーナー</span>
             </p>
           </div>
         </div>

@@ -29,9 +29,10 @@ export default function LiveValue() {
         </div>
 
         <div className={styles.totalTime}>
-          全4回・各回約5時間<br className="sp-only" />
+          <span className="nw">全4回・各回約5時間</span>
+          <br className="sp-only" />
           <span className="pc-only"> </span>
-          （合計約20時間）の対面実技
+          <span className="nw">（合計約20時間）の対面実技</span>
         </div>
       </div>
     </section>

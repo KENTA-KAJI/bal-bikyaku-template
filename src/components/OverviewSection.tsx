@@ -1,5 +1,6 @@
 import type { SeminarData } from "@/data/seminarData";
 import styles from "./OverviewSection.module.css";
+import React from "react";
 
 interface OverviewSectionProps {
   data: Pick<
@@ -17,14 +18,18 @@ interface OverviewSectionProps {
 }
 
 const rows = (data: OverviewSectionProps["data"]) => [
-  { label: "セミナー名", value: data.seminarTitle },
+  { label: "セミナー名", value: <span className="nw">{data.seminarTitle}</span> },
   { label: "形式", value: data.format },
   { label: "1回の時間", value: data.sessionDuration },
-  { label: "会場", value: data.venue },
+  { label: "会場", value: <><span className="nw">東京都内</span><span className="nw">（詳細は申込者へご案内）</span></> },
   { label: "定員", value: `${data.capacity}名` },
   {
     label: "募集期間",
-    value: "2026年7月29日（水）10:00 〜 8月2日（日）23:59",
+    value: (
+      <>
+        <span className="nw">2026年7月29日（水）10:00</span> 〜 <span className="nw">8月2日（日）23:59</span>
+      </>
+    ),
   },
   { label: "開催日", value: "各回 日程調整中（申込者へ別途ご案内）" },
   { label: "講師", value: data.instructor.name },
