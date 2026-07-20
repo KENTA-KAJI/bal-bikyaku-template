@@ -13,7 +13,7 @@ export const seminarData = {
   siteDescription:
     "膝、足部・足関節、骨盤・股関節をつなげて評価し、徒手療法、エクササイズ、再評価までを一つの流れとして学ぶ全4回の対面実技セミナー。講師は理学療法士・日本スポーツ協会公認アスレティックトレーナーの渡辺慶輔。",
   canonicalUrl: "https://bal-bikyaku-template.vercel.app",
-  ogpImageUrl: "/images/ogp.png",
+  ogpImageUrl: "/images/ogp.svg",
 
   // ----------------------------------------
   // セミナー基本情報
