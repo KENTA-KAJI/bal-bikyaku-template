@@ -7,6 +7,9 @@
   padding: var(--space-6) var(--space-8);
   margin-bottom: var(--space-10);
   border: 1px solid var(--color-gold);
+  --color-text-primary: #1b1710;
+  --color-text-secondary: #3a352b;
+  --color-charcoal: #050505;
 }
 
 .includesTitle {
@@ -56,7 +59,7 @@
   margin-top: var(--space-8);
   font-size: var(--text-sm);
   line-height: 1.8;
-  color: var(--color-text-secondary);
+  color: var(--color-text-light) !important;
 }
 
 .memberLogoRow {

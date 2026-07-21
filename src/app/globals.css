@@ -171,7 +171,7 @@ ul, ol {
 }
 
 .section--alt {
-  background-color: var(--color-bg-alt);
+  background-color: #11100f; /* 循環参照を避けるため直接カラーコードを指定 */
   /* スコープ変数を明るい色に反転（このセクション内でのみ有効） */
   --color-text-primary: var(--color-white);
   --color-text-secondary: var(--color-text-light);
@@ -192,7 +192,7 @@ ul, ol {
 }
 
 .section--dark {
-  background-color: var(--color-charcoal);
+  background-color: #050505; /* 循環参照を避けるため直接カラーコードを指定 */
   /* スコープ変数を明るい色に反転 */
   --color-text-primary: var(--color-white);
   --color-text-secondary: var(--color-text-light);
