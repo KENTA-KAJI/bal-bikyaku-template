@@ -172,19 +172,45 @@ ul, ol {
 
 .section--alt {
   background-color: var(--color-bg-alt);
+  /* スコープ変数を明るい色に反転（このセクション内でのみ有効） */
+  --color-text-primary: var(--color-white);
+  --color-text-secondary: var(--color-text-light);
+  --color-text-muted: var(--color-text-muted);
+  --color-charcoal: var(--color-white);
+  
+  color: var(--color-text-secondary);
 }
 
 .section--white {
   background-color: var(--color-white);
+  color: var(--color-text-primary);
 }
 
 .section--gold-pale {
   background-color: var(--color-gold-bg);
+  color: var(--color-text-primary);
 }
 
 .section--dark {
   background-color: var(--color-charcoal);
+  /* スコープ変数を明るい色に反転 */
+  --color-text-primary: var(--color-white);
+  --color-text-secondary: var(--color-text-light);
+  --color-text-muted: var(--color-text-muted);
+  --color-charcoal: var(--color-white);
+  
   color: var(--color-white);
+}
+
+/* ダーク背景セクション内の共通見出しとリード文のオーバーライド */
+.section--alt .section-title,
+.section--dark .section-title {
+  color: var(--color-white);
+}
+
+.section--alt .section-lead,
+.section--dark .section-lead {
+  color: var(--color-text-muted);
 }
 
 .container {
