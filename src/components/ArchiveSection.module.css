@@ -18,6 +18,9 @@
   line-height: 1.85;
   color: var(--color-text-secondary);
   border-left: 3px solid var(--color-charcoal);
+  --color-text-primary: #1b1710;
+  --color-text-secondary: #3a352b;
+  --color-charcoal: #050505;
 }
 
 .note strong {

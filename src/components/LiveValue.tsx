@@ -4,7 +4,7 @@ import { seminarData } from "@/data/seminarData";
 
 export default function LiveValue() {
   return (
-    <section className={styles.section}>
+    <section className={`section section--alt ${styles.section}`}>
       <div className="container reveal">
         <div className={styles.header}>
           <h2 className={styles.title}>

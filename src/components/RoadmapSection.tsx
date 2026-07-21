@@ -3,7 +3,7 @@ import styles from "./RoadmapSection.module.css";
 
 export default function RoadmapSection() {
   return (
-    <section className={styles.section}>
+    <section className={`section section--alt ${styles.section}`}>
       <div className="container reveal">
         <div className={styles.intro}>
           <h2 className={styles.introTitle}>

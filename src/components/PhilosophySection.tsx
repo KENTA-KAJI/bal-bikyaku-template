@@ -7,7 +7,7 @@ export default function PhilosophySection() {
   const { instructor } = seminarData;
 
   return (
-    <section className={styles.section}>
+    <section className={`section section--alt ${styles.section}`}>
       <div className={`${styles.container} reveal`}>
         <div className={styles.header}>
           <h2 className={styles.title}>

@@ -36,6 +36,8 @@
   margin-bottom: var(--space-6);
   border-left: 4px solid var(--color-gold);
   box-shadow: var(--shadow-sm);
+  --color-charcoal: #050505;
+  --color-text-secondary: #3a352b;
 }
 
 .phase:last-child {
