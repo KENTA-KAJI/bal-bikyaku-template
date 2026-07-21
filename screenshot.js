@@ -1,9 +1,9 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 
-const widths = [402, 430];
+const widths = [375, 390, 430, 1200];
 const url = 'http://localhost:3000';
-const outDir = '/Users/rendigim3no.3/.gemini/antigravity/brain/ffb549d8-a2a5-4d68-9da3-e6d59415f2b3';
+const outDir = 'C:/Users/Owner/.gemini/antigravity/brain/7f66b091-5110-4717-af88-99d92ae6cd32';
 const prefix = process.argv[2] || 'before';
 
 (async () => {

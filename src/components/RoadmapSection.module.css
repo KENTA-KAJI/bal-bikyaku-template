@@ -40,7 +40,7 @@
 
 .phase:last-child {
   margin-bottom: 0;
-  border-left-color: var(--color-charcoal);
+  border-left-color: var(--color-gold);
 }
 
 .phaseHeader {
@@ -49,16 +49,16 @@
 
 .phaseSub {
   display: block;
-  font-family: var(--font-sans);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
+  font-family: var(--font-condensed);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
   color: var(--color-gold);
   margin-bottom: 4px;
 }
 
 .phase:last-child .phaseSub {
-  color: var(--color-charcoal);
+  color: var(--color-gold-dark);
 }
 
 .phaseTitle {

@@ -4,37 +4,42 @@
    ============================================================ */
 
 /* Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap");
 
 /* ============================================================
    CSS カスタムプロパティ（デザイントークン）
    ============================================================ */
 :root {
   /* Colors */
-  --color-white: #ffffff;
-  --color-bg: #f7f7f5;
-  --color-bg-alt: #f0f0ee;
+  --color-black: #050505;
+  --color-black-soft: #11100f;
+  --color-panel: #181614;
+  --color-white: #f7f5f0;
+  --color-bg: #f7f5f0;
+  --color-bg-alt: #11100f;
   --color-surface: #ffffff;
-  --color-border: #e2e2df;
-  --color-border-light: #ebebea;
+  --color-border: rgba(199, 165, 106, 0.35);
+  --color-border-light: rgba(199, 165, 106, 0.15);
 
-  --color-text-primary: #1a1a1a;
-  --color-text-secondary: #4a4a4a;
-  --color-text-muted: #7a7a7a;
-  --color-text-light: #aaaaaa;
+  --color-text-primary: #1b1710;
+  --color-text-secondary: #3a352b;
+  --color-text-muted: #b9b3aa;
+  --color-text-light: #d6d1c7;
 
-  --color-gold: #b5973a;
-  --color-gold-light: #c9ad58;
-  --color-gold-pale: #f5efde;
-  --color-gold-bg: #faf7ef;
+  --color-gold: #c7a56a;
+  --color-gold-light: #ddc28e;
+  --color-gold-dark: #8f7246;
+  --color-gold-pale: rgba(199, 165, 106, 0.08);
+  --color-gold-bg: rgba(199, 165, 106, 0.06);
 
-  --color-charcoal: #1a1a1a;
-  --color-charcoal-mid: #2d2d2d;
+  --color-charcoal: #050505;
+  --color-charcoal-mid: #11100f;
 
   /* Typography */
   --font-serif: "Noto Serif JP", "游明朝", "YuMincho", "HG明朝E", serif;
   --font-sans: "Noto Sans JP", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN",
     "Yu Gothic Medium", "游ゴシック Medium", sans-serif;
+  --font-condensed: "Oswald", "Hiragino Kaku Gothic ProN", sans-serif;
 
   /* Fluid Typography (clamp: min, preferred, max) */
   --text-xs: clamp(0.7rem, 2vw, 0.75rem);
@@ -63,19 +68,19 @@
   --space-24: 6rem;
 
   /* Section padding (mobile) */
-  --section-px: 1rem;
-  --section-py: 3.5rem;
+  --section-px: 1.25rem;
+  --section-py: clamp(56px, 9vw, 108px);
 
   /* Border radius */
-  --radius-sm: 4px;
-  --radius-md: 8px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
   --radius-lg: 12px;
   --radius-xl: 16px;
 
   /* Shadows */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.10);
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.25);
 
   /* Transitions */
   --transition-fast: 150ms ease;
@@ -255,7 +260,7 @@ ul, ol {
   letter-spacing: 0.05em;
   line-height: 1.4;
   text-align: center;
-  transition: all var(--transition-base);
+  transition: background-color var(--transition-base), transform var(--transition-fast), box-shadow var(--transition-fast);
   white-space: nowrap;
   cursor: pointer;
   width: 100%;
@@ -265,23 +270,37 @@ ul, ol {
   background-color: var(--color-charcoal);
   color: var(--color-white);
   border: 2px solid var(--color-charcoal);
+  box-shadow: var(--shadow-sm);
 }
 
 .btn--primary:hover:not(:disabled),
 .btn--primary:focus-visible:not(:disabled) {
   background-color: var(--color-charcoal-mid);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn--primary:active {
+  transform: translateY(0);
 }
 
 .btn--gold {
   background-color: var(--color-gold);
   color: var(--color-white);
   border: 2px solid var(--color-gold);
+  box-shadow: var(--shadow-sm);
 }
 
 .btn--gold:hover:not(:disabled),
 .btn--gold:focus-visible:not(:disabled) {
   background-color: var(--color-gold-light);
   border-color: var(--color-gold-light);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn--gold:active {
+  transform: translateY(0);
 }
 
 .btn--outline {

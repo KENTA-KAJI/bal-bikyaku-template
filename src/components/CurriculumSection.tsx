@@ -11,11 +11,11 @@ type CurriculumItem = SeminarData["curriculum"][number];
 function SessionHeader({ session }: { session: CurriculumItem }) {
   return (
     <div className={styles.triggerInner}>
-      <span className={styles.sessionNum}>第{session.session}回</span>
-      <div className={styles.sessionInfo}>
+      <div className={styles.headerTop}>
+        <span className={styles.sessionNum}>第{session.session}回</span>
         <span className={styles.sessionArea}>{session.area}</span>
-        <span className={styles.sessionTitle}>{session.title}</span>
       </div>
+      <span className={styles.sessionTitle}>{session.title}</span>
     </div>
   );
 }
