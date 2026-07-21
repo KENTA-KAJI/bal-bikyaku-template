@@ -11,10 +11,10 @@ export default function PreLecture({ lectures }: PreLectureProps) {
       <div className="container">
         <p className="section-label">申込者限定の事前講義</p>
         <h2 id="prelecture-title" className="section-title">
-          本編前に視聴できる<br />事前収録講義 2本
+          本編前に視聴できる<br className="sp-only" />事前収録講義 2本
         </h2>
         <p className="section-lead">
-          申込後、本編開催前に視聴いただける限定講義を2本提供します。<br />
+          申込後、本編開催前に視聴いただける限定講義を2本提供します。<br className="pc-only" />
           基礎知識を整理した状態で実技に臨むことができます。
         </p>
         <div className={styles.list}>

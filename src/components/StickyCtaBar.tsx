@@ -27,9 +27,6 @@ export default function StickyCtaBar({ data }: StickyCtaBarProps) {
       className={styles.bar}
       role="region"
       aria-label="申込みバー"
-      style={{
-        paddingBottom: `max(var(--space-3), env(safe-area-inset-bottom))`,
-      }}
     >
       <CtaButtons
         salesState={salesState}

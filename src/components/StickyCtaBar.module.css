@@ -9,7 +9,8 @@
   -webkit-backdrop-filter: blur(8px);
   border-top: 1px solid var(--color-border);
   padding: var(--space-3) var(--space-4);
-  /* safe-area はコンポーネント側のinlineスタイルで制御 */
+  padding-bottom: calc(var(--space-3) + 8px); /* フォールバック */
+  padding-bottom: max(var(--space-3), env(safe-area-inset-bottom));
 }
 
 /* PC では固定ボタンを非表示（本文のCTAで十分） */

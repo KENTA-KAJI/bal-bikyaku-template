@@ -30,11 +30,11 @@ export default function FinalCta({ data }: FinalCtaProps) {
       <div className="container">
         <p className={styles.label}>定員10名・先着順</p>
         <h2 id="final-cta-title" className={styles.title}>
-          美脚指導のテンプレート<br />
+          美脚指導のテンプレート<br className="sp-only" />
           全4回実技セミナー
         </h2>
         <p className={styles.sub}>
-          評価・徒手療法・エクササイズをつなげる<br />
+          評価・徒手療法・エクササイズをつなげる<br className="sp-only" />
           一連の型を習得する
         </p>
 
