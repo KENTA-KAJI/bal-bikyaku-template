@@ -218,26 +218,16 @@ export default function LandingPage() {
     <>
       <section className={styles.hero}>
         <div className={styles.heroInner}>
-          <div>
-            <p className={styles.kicker}>
-              LOWER LIMB ASSESSMENT & INTERVENTION
-            </p>
-            <h1>
-              そのニーイン、原因は足部ですか、股関節ですか。
-              <br />
-              <span>それとも、両方ですか。</span>
-            </h1>
-            <p className={styles.heroLead}>
-              膝・足部・足関節・骨盤・股関節をつなげて評価し、
-              <br />
-              徒手療法からエクササイズ、再評価までを
-              <br />
-              一つの流れとして組み立てる全4回実技セミナー
-            </p>
-            <h2 className={styles.productName}>美脚指導のテンプレート</h2>
-            <p>
-              講師：渡辺慶輔（理学療法士／日本スポーツ協会公認アスレティックトレーナー）
-            </p>
+          <Image
+            src="/images/bikyaku-main-visual.jpg"
+            alt="美脚指導のテンプレート。評価・徒手療法・エクササイズをつなげる美脚プログラミングの設計図。講師：渡辺慶輔"
+            width={2048}
+            height={1152}
+            priority
+            sizes="(max-width: 768px) 100vw, 1120px"
+            className={styles.mainVisual}
+          />
+          <div className={styles.heroMeta}>
             <div className={styles.chips}>
               {["全4回", "各回約5時間", "定員10名", "東京開催", "対面実技"].map(
                 (x) => (
@@ -249,14 +239,6 @@ export default function LandingPage() {
               募集開始：2026年7月29日（水）10:00
             </p>
           </div>
-          <Image
-            src={seminarData.instructor.imageUrl}
-            alt={seminarData.instructor.imageAlt}
-            width={520}
-            height={520}
-            priority
-            className={styles.heroImage}
-          />
         </div>
         <div className={styles.heroCta}>
           <SalesCta placement="hero" />

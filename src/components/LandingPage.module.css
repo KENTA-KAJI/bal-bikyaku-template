@@ -81,9 +81,16 @@
 .heroInner {
   width: min(100%, 1120px);
   margin: auto;
-  display: grid;
-  gap: 2rem;
-  align-items: center;
+}
+.mainVisual {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(199, 165, 106, 0.35);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.42);
+}
+.heroMeta {
+  padding-top: 1.25rem;
 }
 .hero h1 {
   font-family: var(--font-serif);
@@ -591,9 +598,6 @@
   margin-top: 2rem;
 }
 @media (min-width: 768px) {
-  .heroInner {
-    grid-template-columns: 1.25fr 0.75fr;
-  }
   .problemGrid,
   .cardGrid {
     grid-template-columns: repeat(3, 1fr);
