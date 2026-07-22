@@ -6,9 +6,10 @@ interface AccordionItemProps {
   title: React.ReactNode;
   children: React.ReactNode;
   defaultOpen?: boolean;
+  hideIcon?: boolean;
 }
 
-export function AccordionItem({ title, children, defaultOpen = false }: AccordionItemProps) {
+export function AccordionItem({ title, children, defaultOpen = false, hideIcon = false }: AccordionItemProps) {
   const [isOpen, setIsOpen] = useState(defaultOpen);
   const contentRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState<number | "auto">(defaultOpen ? "auto" : 0);
@@ -42,9 +43,11 @@ export function AccordionItem({ title, children, defaultOpen = false }: Accordio
         aria-controls={panelId}
       >
         <span className={styles.triggerTitle}>{title}</span>
-        <span className={styles.icon} aria-hidden="true">
-          {isOpen ? "−" : "+"}
-        </span>
+        {!hideIcon && (
+          <span className={styles.icon} aria-hidden="true">
+            {isOpen ? "−" : "+"}
+          </span>
+        )}
       </button>
       <div
         id={panelId}
