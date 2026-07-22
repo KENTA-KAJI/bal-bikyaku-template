@@ -75,5 +75,5 @@ export default function SalesCta({ placement }: { placement: Placement }) {
 }
 
 export function FinalInstructorImage() {
-  return <Image src={seminarData.instructor.imageUrl} alt={seminarData.instructor.imageAlt} width={160} height={160} className={styles.finalImage} />;
+  return <Image src="/images/bikyaku-main-visual.jpg" alt="美脚指導のテンプレート メインビジュアル" width={480} height={270} sizes="(max-width: 480px) 100vw, 440px" className={styles.finalImage} />;
 }

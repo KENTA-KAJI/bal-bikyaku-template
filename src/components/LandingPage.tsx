@@ -721,7 +721,10 @@ export default function LandingPage() {
           <div className={styles.finalMeta}>
             <FinalInstructorImage />
             <div>
-              <h3>美脚指導のテンプレート｜全4回実技セミナー</h3>
+              <h3 className={styles.finalProductTitle}>
+                <span>美脚指導のテンプレート</span>
+                <span>全4回実技セミナー</span>
+              </h3>
               <p>定員10名・先着順</p>
               <p>募集開始：2026年7月29日（水）10:00</p>
             </div>

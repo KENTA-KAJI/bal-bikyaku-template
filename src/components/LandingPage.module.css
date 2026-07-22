@@ -577,7 +577,8 @@
   background: linear-gradient(135deg, #050505, #18130c);
 }
 .finalMeta {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(240px, 0.9fr) 1.1fr;
   gap: 1.25rem;
   align-items: center;
   margin: 2rem 0;
@@ -589,10 +590,14 @@
   margin-bottom: 0.5rem;
   text-wrap: balance;
 }
+.finalProductTitle span {
+  display: block;
+}
 .finalImage {
-  width: 110px;
-  height: 110px;
-  object-fit: contain;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border: 1px solid rgba(199, 165, 106, 0.35);
 }
 .conclusion {
   margin-top: 2rem;
@@ -724,8 +729,8 @@
     padding: 1.25rem;
   }
   .finalImage {
-    width: 150px;
-    height: 110px;
+    width: 100%;
+    height: auto;
     margin: auto;
   }
   .purchase span {
