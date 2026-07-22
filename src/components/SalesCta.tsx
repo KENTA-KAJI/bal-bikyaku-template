@@ -38,14 +38,18 @@ export default function SalesCta({ placement }: { placement: Placement }) {
         <p className={styles.ctaCopy}>{open ? openCopy[placement] : previewCopy[placement]}</p>
         <div className={styles.purchaseGrid}>
           <a className={`${styles.purchase} ${!generalEnabled ? styles.disabled : ""}`} href={generalEnabled ? seminarData.generalStripeUrl : undefined} aria-disabled={!generalEnabled} tabIndex={generalEnabled ? 0 : -1}>
-            一般価格：66,000円（税込）でのお申込みはこちら<span>（7/29 10:00〜）</span>
+            <span className={styles.priceLabel}>一般価格</span>
+            <strong className={styles.priceAmount}>66,000円（税込）</strong>
+            <span className={styles.purchaseTiming}>{open ? "お申込みはこちら" : "7月29日（水）10:00 募集開始"}</span>
           </a>
           <a className={`${styles.purchase} ${styles.memberPurchase} ${!memberEnabled ? styles.disabled : ""}`} href={memberEnabled ? seminarData.memberStripeUrl : undefined} aria-disabled={!memberEnabled} tabIndex={memberEnabled ? 0 : -1}>
-            BAL STUDIO会員価格：44,000円（税込）でのお申込みはこちら<span>（7/29 10:00〜）</span>
+            <span className={styles.priceLabel}>BAL STUDIO会員価格</span>
+            <strong className={styles.priceAmount}>44,000円（税込）</strong>
+            <span className={styles.purchaseTiming}>{open ? "お申込みはこちら" : "7月29日（水）10:00 募集開始"}</span>
           </a>
         </div>
         {!open && <a className={styles.lineButton} href={seminarData.contactLine} target="_blank" rel="noopener noreferrer">募集開始をお知らせ（LINE友だち追加）</a>}
-        {placement === "final" && <a className={styles.mailButton} href={`mailto:${seminarData.contactEmail}`}>メールで問い合わせる：{seminarData.contactEmail}</a>}
+        {placement === "final" && <a className={styles.mailButton} href={`mailto:${seminarData.contactEmail}`}><span>メールで問い合わせる</span><small>{seminarData.contactEmail}</small></a>}
       </div>
     );
   }
