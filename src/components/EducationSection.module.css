@@ -1,0 +1,10 @@
+.section { background: #f7f5f0; }
+.body { display: grid; gap: 1.25rem; color: var(--color-text-secondary); line-height: 1.95; }
+.body strong { color: var(--color-text-primary); background: linear-gradient(transparent 65%, rgba(199,165,106,.25) 65%); }
+.flow { display: grid; gap: .75rem; margin: 2rem 0; }
+.flow li { display: grid; grid-template-columns: 2.5rem 1fr; gap: 1rem; align-items: center; padding: 1.1rem; border: 1px solid var(--color-border); background: #fff; }
+.flow span { font-family: var(--font-condensed); color: var(--color-gold-dark); font-weight: 700; }
+.flow p { line-height: 1.7; }
+.rescue { padding: 1.5rem; border-left: 3px solid var(--color-gold); background: var(--color-gold-pale); line-height: 1.85; }
+.rescueLead { font-family: var(--font-serif); font-weight: 700; margin-bottom: .5rem; }
+@media (min-width: 768px) { .flow { grid-template-columns: repeat(3, 1fr); } .flow li { grid-template-columns: 1fr; align-content: start; } }

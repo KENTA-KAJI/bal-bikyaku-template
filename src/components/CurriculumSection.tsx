@@ -8,6 +8,29 @@ interface CurriculumSectionProps {
 
 type CurriculumItem = SeminarData["curriculum"][number];
 
+const sessionSummaries: Record<number, { assessment: string; intervention: string; outcome: string }> = {
+  1: {
+    assessment: "大腿骨・膝蓋骨・脛骨の位置関係と、静止時・動作時の膝アライメントを確認します。",
+    intervention: "評価結果に応じた膝周囲の徒手療法と、下腿回旋や膝屈伸を扱うエクササイズを学びます。",
+    outcome: "膝の見え方を膝だけの問題と決めつけず、脚のラインへ影響する要素を整理できる状態を目指します。",
+  },
+  2: {
+    assessment: "足部アーチ、後足部・前足部、足関節可動域と、動作中の足部の安定性を確認します。",
+    intervention: "足関節や下腿への徒手療法と、足趾・アーチ・下腿を使うエクササイズを扱います。",
+    outcome: "足部・足関節の状態が膝下ラインやニーインへどう影響するかを整理できる状態を目指します。",
+  },
+  3: {
+    assessment: "骨盤の傾き、股関節可動域、筋機能と、骨盤・大腿骨の位置関係を確認します。",
+    intervention: "股関節周囲への徒手療法と、呼吸・体幹・殿筋・腸腰筋のエクササイズを扱います。",
+    outcome: "太もものねじれ、外ももの張り、膝の入り方に関わる要素を整理できる状態を目指します。",
+  },
+  4: {
+    assessment: "第1〜3回の視点をつなぎ、動作評価から複数の問題を整理します。",
+    intervention: "確認できている範囲では、評価結果から介入の優先順位を考える統合を扱います。",
+    outcome: "部位別の知識を一つの流れへ統合し、どこから介入するかを判断できる状態を目指します。",
+  },
+};
+
 function SessionHeader({ session }: { session: CurriculumItem }) {
   return (
     <div className={styles.triggerInner}>
@@ -37,6 +60,7 @@ function CategoryList({ title, items }: { title: string; items: readonly string[
 }
 
 function SessionContent({ session }: { session: CurriculumItem }) {
+  const summary = sessionSummaries[session.session];
   return (
     <div className={styles.sessionContent}>
       <div className={styles.sessionMeta}>
@@ -47,9 +71,16 @@ function SessionContent({ session }: { session: CurriculumItem }) {
       </div>
       <p className={styles.goal}>{session.goal}</p>
 
+      <div className={styles.summary}>
+        <div><strong>この回で扱う問題</strong><p>{session.cases.length > 0 ? session.cases.join("、") : "複数部位をつなげた動作評価と、介入の優先順位"}</p></div>
+        <div><strong>学ぶ評価</strong><p>{summary.assessment}</p></div>
+        <div><strong>徒手療法・エクササイズ</strong><p>{summary.intervention}</p></div>
+        <div><strong>判断できるようになること</strong><p>{summary.outcome}</p></div>
+      </div>
+
       {session.cases && session.cases.length > 0 && (
         <div className={styles.cases}>
-          <p className={styles.casesTitle}>対応できるようになるケース</p>
+          <p className={styles.casesTitle}>詳しく扱う見え方・状態</p>
           <ul role="list">
             {session.cases.map((c, i) => (
               <li key={i} className={styles.caseItem}>

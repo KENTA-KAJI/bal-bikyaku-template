@@ -164,3 +164,28 @@
     gap: var(--space-6);
   }
 }
+.summary {
+  display: grid;
+  gap: .75rem;
+  margin: 1.5rem 0;
+}
+
+.summary > div {
+  padding: 1rem;
+  background: rgba(199, 165, 106, .08);
+  border-left: 2px solid var(--color-gold);
+}
+
+.summary strong {
+  display: block;
+  margin-bottom: .35rem;
+  color: var(--color-gold-dark);
+  font-size: .82rem;
+  letter-spacing: .04em;
+}
+
+.summary p { line-height: 1.75; }
+
+@media (min-width: 768px) {
+  .summary { grid-template-columns: repeat(2, 1fr); }
+}

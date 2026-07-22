@@ -1,0 +1,8 @@
+.lead { font-family: var(--font-serif); font-size: var(--text-xl); color: var(--color-white); line-height: 1.8; margin: 1.5rem 0 2rem; }
+.grid { display: grid; gap: 1rem; }
+.card { padding: 1.5rem; border: 1px solid var(--color-border); background: rgba(255,255,255,.035); }
+.card span { color: var(--color-gold); font-family: var(--font-condensed); font-size: .8rem; letter-spacing: .12em; }
+.card h3 { color: var(--color-white); font-family: var(--font-serif); font-size: 1.2rem; margin: .45rem 0 .75rem; }
+.card p, .conclusion { color: var(--color-text-light); line-height: 1.85; }
+.conclusion { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border); }
+@media (min-width: 768px) { .grid { grid-template-columns: repeat(3, 1fr); } }

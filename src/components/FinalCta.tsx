@@ -29,13 +29,10 @@ export default function FinalCta({ data }: FinalCtaProps) {
     <section className={`section section--dark ${styles.section}`} aria-labelledby="final-cta-title">
       <div className="container">
         <p className={styles.label}>定員10名・先着順</p>
-        <h2 id="final-cta-title" className={styles.title}>
-          美脚指導のテンプレート<br className="sp-only" />
-          全4回実技セミナー
-        </h2>
+        <h2 id="final-cta-title" className={styles.title}>目の前の脚に、<br />介入の順番を決めるための型を。</h2>
         <p className={styles.sub}>
-          評価・徒手療法・エクササイズをつなげる<br className="sp-only" />
-          一連の型を習得する
+          張っている場所を緩め、弱そうな筋肉を鍛える。そこに評価の視点を加え、膝・足部・骨盤をつなげて、なぜその介入を選ぶのか説明できる指導へ。<br /><br />
+          この4日間で増やすのは、手技の数ではありません。目の前の脚に対して、介入の順番を決めるための型です。
         </p>
 
         {salesState === "preview" && (

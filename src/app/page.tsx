@@ -19,6 +19,9 @@ import FaqSection from "@/components/FaqSection";
 import FinalCta from "@/components/FinalCta";
 import ContactFooter from "@/components/ContactFooter";
 import StickyCtaBar from "@/components/StickyCtaBar";
+import EducationSection from "@/components/EducationSection";
+import BeautyDefinition from "@/components/BeautyDefinition";
+import MidCta from "@/components/MidCta";
 
 export default function Home() {
   const {
@@ -59,6 +62,7 @@ export default function Home() {
       <main id="main-content">
         {/* 1. ファーストビュー */}
         <Hero />
+        <MidCta label="受講料金と申込み方法を確認する" />
 
         {/* 2. 開催概要の短い帯 */}
         <ShortOverview />
@@ -66,17 +70,23 @@ export default function Home() {
         {/* 3 & 4. 現場への具体的な問題提起 / その場の変化だけでは指導の型にならない理由 */}
         <IntroSection />
 
+        {/* 問題の原因を再定義する教育 / 美脚の定義 */}
+        <EducationSection />
+        <BeautyDefinition />
+
         {/* 5. 講師・渡辺慶輔が考える美脚指導 */}
         <PhilosophySection />
 
         {/* 6 & 7. このセミナーで習得する判断のテンプレート / 6ステップ */}
         <TemplateSteps />
+        <MidCta label="受講料金と申込み方法を確認する" />
 
         {/* 8 & 9. なぜその順番で学ぶのか / 全4回のロードマップ */}
         <RoadmapSection />
 
         {/* 10. 各回の詳しいカリキュラム */}
         <CurriculumSection curriculum={curriculum} />
+        <MidCta label="受講料金と申込み方法を確認する" />
 
         {/* 11. 全4回を受講した後にできるようになること */}
         <AfterSection />

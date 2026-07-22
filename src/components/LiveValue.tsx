@@ -10,12 +10,12 @@ export default function LiveValue() {
           <h2 className={styles.title}>
             動画では伝わらない感覚を
             <br className="sp-only" />
-            少人数で確実に身につける
+            定員10名の対面実技で確かめる
           </h2>
           <p className={styles.lead}>
             動画を見るだけでは、触診の位置や圧、関節を動かした感覚、
-            介入前後のわずかな変化までは身につきません。<br />
-            本セミナーは、定員{seminarData.capacity}名の少人数制だからこそ、以下の実践を可能にします。
+            代償動作の見分け方や、介入前後の小さな変化は、動画を見るだけでは習得しにくいものです。<br />
+            本セミナーでは、定員{seminarData.capacity}名の対面実技で、実際に身体へ触れながら以下を確認します。
           </p>
         </div>
 
@@ -24,7 +24,7 @@ export default function LiveValue() {
           <div className={styles.point}>関節の動きを確かめる</div>
           <div className={styles.point}>評価と介入を繰り返す</div>
           <div className={styles.point}>講師の手の位置や力加減を見る</div>
-          <div className={styles.point}>自分の評価が合っているか確認する</div>
+          <div className={styles.point}>動作中の代償を見分ける</div>
           <div className={styles.point}>介入後に変化を再評価する</div>
         </div>
 

@@ -21,19 +21,18 @@ export default function Hero() {
             <div className={styles.headerText}>
               <span className={styles.englishTitle}>LOWER LIMB ASSESSMENT & INTERVENTION</span>
               <h1 className={styles.mainCopy}>
-                <span>脚を見て、</span>
+                <span>外ももを緩める前に、</span>
                 <br />
-                <span>なんとなく外ももを緩める。</span>
+                <span>なぜ張ったのかを</span>
                 <br />
-                <br className="sp-only" />
-                <span>そんな美脚指導を終わらせる。</span>
+                <span>説明できますか？</span>
               </h1>
               <p className={styles.subCopy}>
                 <span>膝・足部・足関節・骨盤・股関節を</span><br className="sp-only" /><span>つなげて評価し、</span>
                 <br className="pc-only" />
                 <span>徒手療法からエクササイズ、再評価までを</span>
                 <br className="pc-only" />
-                <span>一つの流れとして組み立てる</span>
+                <span>一つの判断の流れとして組み立てる</span>
                 <br className="sp-only" />
                 <span className="nw">全4回実技セミナー</span>
               </p>

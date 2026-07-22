@@ -12,7 +12,7 @@ export default function AfterSection() {
             できるようになること
           </h2>
           <p className={styles.lead}>
-            「理解できた」で終わらせず、翌日からの現場の指導が明確に変わります。
+            知識を増やすだけでなく、評価・選択・説明・再評価という現場の行動へつなげます。
           </p>
         </div>
 

@@ -7,7 +7,7 @@ export default function IntroSection() {
       <div className={`${styles.container} reveal`}>
         <span className={styles.eyebrow}>WHO IS THIS FOR</span>
         <h2 className={styles.lead}>
-          こんなアプローチに<br className="sp-only" />なっていませんか？
+          そのアプローチ、変化は出ても、<br />なぜ変わったかを説明できますか？
         </h2>
 
         <div className={styles.cardContainer}>
@@ -26,13 +26,13 @@ export default function IntroSection() {
 
         <div className={styles.callout}>
           <p className={styles.calloutText}>
-            問題は、学んでいる量が足りないことではありません。<br className="pc-only" />
-            膝・足部・骨盤といった各部位をバラバラに捉え、知識を「現場で繋ぎ合わせる方法」を知らないことにあります。
+            どの方法も、必要な場面があります。<br />
+            ただし、評価と優先順位がないまま選ぶと、介入は場当たり的になりやすくなります。
           </p>
         </div>
 
         <p className={styles.bodyText}>
-          その場で一時的な変化が出たとしても、「なぜその問題が起きたのか」「なぜその介入を選んだのか」「次に何を行うべきなのか」を説明できなければ、指導は毎回その場しのぎになってしまいます。
+          その場で変化が出ても、次に何をすべきか迷う。介入を選んだ理由を説明できない。再評価する項目が定まらない。もし思い当たるなら、必要なのは知識を増やすことより、持っている知識を使う順番の整理かもしれません。
         </p>
 
         <p className={styles.bodyText}>

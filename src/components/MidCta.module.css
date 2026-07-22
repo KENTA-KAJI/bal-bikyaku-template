@@ -1,0 +1,5 @@
+.band { padding: 2rem 1.25rem; text-align: center; background: #c7a56a; color: #16120c; }
+.band p { line-height: 1.65; }
+.date { font-family: var(--font-serif); font-size: var(--text-lg); font-weight: 700; margin-bottom: .25rem; }
+.link { display: inline-flex; justify-content: center; align-items: center; min-height: 50px; margin-top: 1rem; padding: .75rem 1.5rem; background: #050505; color: #fff; font-weight: 700; border: 1px solid #050505; }
+.link:hover { background: #211c15; }

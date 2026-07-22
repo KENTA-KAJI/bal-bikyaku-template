@@ -17,9 +17,8 @@ export default function TemplateSteps() {
             判断のテンプレート
           </h2>
           <p className={styles.lead}>
-            感覚的なアプローチから脱却し、
-            <br />
-            根拠のある指導を組み立てる6つのステップ
+            これは、全員に同じ施術や運動を行うマニュアルではありません。<br />
+            状態を評価し、何を確認し、何から介入し、何を再評価するかを決めるための思考と実践の順番です。
           </p>
         </div>
 
@@ -35,6 +34,9 @@ export default function TemplateSteps() {
             </div>
           ))}
         </div>
+        <p className={styles.lead}>
+          正解の手技を暗記するのではなく、正解へたどり着くための順番を持つ。
+        </p>
       </div>
     </section>
   );
