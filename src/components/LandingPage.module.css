@@ -57,6 +57,24 @@
 .prose strong {
   font-weight: 700;
 }
+.emphasisText,
+.emphasisInline {
+  color: #8f7246;
+  font-weight: 800;
+}
+.emphasisText {
+  padding-left: 0.9rem;
+  border-left: 2px solid #c7a56a;
+}
+.emphasisInline {
+  margin-right: 0.15em;
+}
+.dark .emphasisText,
+.dark .emphasisInline,
+.final .emphasisText,
+.final .emphasisInline {
+  color: #e0c38b;
+}
 .prose blockquote,
 .conclusion {
   font-family: var(--font-serif);
