@@ -630,12 +630,13 @@ export default function LandingPage() {
           </p>
         </div>
         <div className={styles.priceGrid}>
-          <article>
+          <article className={styles.generalPriceCard}>
             <h3>一般価格</h3>
             <strong>66,000円（税込）</strong>
             <p>7月29日（水）10:00募集開始</p>
           </article>
-          <article>
+          <article className={styles.studioPriceCard}>
+            <span className={styles.studioBadge}>一般価格より22,000円お得</span>
             <h3>BAL STUDIO会員価格</h3>
             <strong>44,000円（税込）</strong>
             <p>7月29日（水）10:00募集開始</p>
@@ -643,6 +644,14 @@ export default function LandingPage() {
               BAL
               STUDIO会員価格でお申し込みの場合、申込情報と会員登録情報を確認させていただきます。
             </small>
+            <a
+              className={styles.studioJoinLink}
+              href={seminarData.contactLine}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              BAL STUDIO入会についてLINEで相談する
+            </a>
           </article>
         </div>
         <SalesCta placement="pricing" />

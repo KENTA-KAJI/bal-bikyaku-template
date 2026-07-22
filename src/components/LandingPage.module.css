@@ -432,6 +432,14 @@
   margin-bottom: 1rem;
   text-wrap: pretty;
 }
+.curriculumCtaCopy span,
+.curriculumCtaCopy strong {
+  display: block;
+}
+.curriculumCtaCopy strong {
+  margin-top: 0.25rem;
+  color: #111;
+}
 .linkRow,
 .purchaseGrid {
   display: grid;
@@ -474,8 +482,25 @@
   gap: 0.2rem;
 }
 .memberPurchase {
-  border-color: #c7a56a;
-  color: #5e4828;
+  position: relative;
+  border: 2px solid #c7a56a;
+  background: linear-gradient(145deg, #fff9ec, #ead4a7);
+  color: #2b2112;
+  box-shadow: 0 8px 24px rgba(199, 165, 106, 0.25);
+}
+.memberSavings,
+.studioBadge {
+  display: inline-block;
+  width: max-content;
+  padding: 0.3rem 0.65rem;
+  background: #c7a56a;
+  color: #111;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+.memberSavings {
+  margin-bottom: 0.2rem;
 }
 .priceLabel {
   font-size: 0.78rem;
@@ -489,9 +514,39 @@
   font-weight: 500;
 }
 .disabled {
-  opacity: 0.48;
+  opacity: 0.62;
   pointer-events: none;
   filter: grayscale(1);
+}
+.memberPurchase.disabled {
+  opacity: 0.82;
+  filter: none;
+}
+.generalPriceCard {
+  opacity: 0.78;
+}
+.studioPriceCard {
+  position: relative;
+  border: 2px solid #c7a56a !important;
+  background: linear-gradient(145deg, rgba(199, 165, 106, 0.2), rgba(255, 255, 255, 0.06)) !important;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.28);
+}
+.studioPriceCard strong {
+  color: #f1d398;
+  font-size: clamp(1.9rem, 4vw, 2.35rem);
+}
+.studioBadge {
+  margin-bottom: 0.7rem;
+}
+.studioJoinLink {
+  display: block;
+  margin-top: 1.25rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid #c7a56a;
+  background: #c7a56a;
+  color: #111;
+  text-align: center;
+  font-weight: 800;
 }
 .contact {
   display: flex;

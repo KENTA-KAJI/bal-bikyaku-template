@@ -10,7 +10,7 @@ type Placement = "hero" | "steps" | "curriculum" | "pricing" | "final";
 const previewCopy: Record<Placement, string> = {
   hero: "募集開始は7月29日（水）10:00です。開始時にBAL LINEよりお知らせします。",
   steps: "この6ステップを、全4回・約20時間の対面実技で、自分の手と目で再現できるようになります。募集開始は7月29日（水）10:00。",
-  curriculum: "カリキュラムの全体像を確認したうえで、募集開始をお待ちください。7月29日（水）10:00募集開始。",
+  curriculum: "カリキュラムの全体像を確認したうえで、募集開始をお待ちください。7月29日（水）10:00募集開始",
   pricing: "募集開始前のため、現在はお申込みいただけません。開始時にBAL LINEよりお知らせします。",
   final: "募集開始時にBAL LINEよりお知らせします",
 };
@@ -43,6 +43,7 @@ export default function SalesCta({ placement }: { placement: Placement }) {
             <span className={styles.purchaseTiming}>{open ? "お申込みはこちら" : "7月29日（水）10:00 募集開始"}</span>
           </a>
           <a className={`${styles.purchase} ${styles.memberPurchase} ${!memberEnabled ? styles.disabled : ""}`} href={memberEnabled ? seminarData.memberStripeUrl : undefined} aria-disabled={!memberEnabled} tabIndex={memberEnabled ? 0 : -1}>
+            <span className={styles.memberSavings}>一般価格より22,000円お得</span>
             <span className={styles.priceLabel}>BAL STUDIO会員価格</span>
             <strong className={styles.priceAmount}>44,000円（税込）</strong>
             <span className={styles.purchaseTiming}>{open ? "お申込みはこちら" : "7月29日（水）10:00 募集開始"}</span>
@@ -56,7 +57,15 @@ export default function SalesCta({ placement }: { placement: Placement }) {
 
   return (
     <div className={styles.ctaBox}>
-      <p className={styles.ctaCopy}>{open ? openCopy[placement] : previewCopy[placement]}</p>
+      {placement === "curriculum" && !open ? (
+        <p className={`${styles.ctaCopy} ${styles.curriculumCtaCopy}`}>
+          <span>カリキュラムの全体像を確認したうえで</span>
+          <span>募集開始をお待ちください。</span>
+          <strong>7月29日（水）10:00募集開始</strong>
+        </p>
+      ) : (
+        <p className={styles.ctaCopy}>{open ? openCopy[placement] : previewCopy[placement]}</p>
+      )}
       <div className={styles.linkRow}>
         <a className={styles.lineButton} href={seminarData.contactLine} target="_blank" rel="noopener noreferrer">BAL LINE公式へ</a>
         {placement === "hero" && <a className={styles.mailButton} href={`mailto:${seminarData.contactEmail}`}>メールで問い合わせる</a>}
