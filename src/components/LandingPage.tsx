@@ -3,6 +3,7 @@ import { seminarData } from "@/data/seminarData";
 import { Accordion, AccordionItem } from "./Accordion";
 import SalesCta, { FinalInstructorImage } from "./SalesCta";
 import InterviewVideo from "./InterviewVideo";
+import SectionConversion from "./SectionConversion";
 import styles from "./LandingPage.module.css";
 
 const problems = [
@@ -137,9 +138,12 @@ function Section({
   id?: string;
 }) {
   return (
-    <section id={id} className={`${styles.section} ${dark ? styles.dark : ""}`}>
-      <div className={styles.container}>{children}</div>
-    </section>
+    <>
+      <section id={id} className={`${styles.section} ${dark ? styles.dark : ""}`}>
+        <div className={styles.container}>{children}</div>
+      </section>
+      <SectionConversion />
+    </>
   );
 }
 
@@ -293,6 +297,7 @@ export default function LandingPage() {
       </Section>
 
       <InterviewVideo youtubeUrl={seminarData.youtubeUrl} />
+      <SectionConversion />
 
       <Section dark>
         <p className={styles.kicker}>REFRAME</p>
@@ -506,9 +511,6 @@ export default function LandingPage() {
       </Section>
 
       <Curriculum />
-      <div className={styles.midCta}>
-        <SalesCta placement="curriculum" />
-      </div>
 
       <Section dark>
         <p className={styles.kicker}>IN PERSON</p>
