@@ -2,6 +2,7 @@ import Image from "next/image";
 import { seminarData } from "@/data/seminarData";
 import { Accordion, AccordionItem } from "./Accordion";
 import SalesCta, { FinalInstructorImage } from "./SalesCta";
+import InterviewVideo from "./InterviewVideo";
 import styles from "./LandingPage.module.css";
 
 const problems = [
@@ -290,6 +291,8 @@ export default function LandingPage() {
           </p>
         </div>
       </Section>
+
+      <InterviewVideo youtubeUrl={seminarData.youtubeUrl} />
 
       <Section dark>
         <p className={styles.kicker}>REFRAME</p>
