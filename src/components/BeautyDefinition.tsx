@@ -8,7 +8,7 @@ const elements = [
 
 export default function BeautyDefinition() {
   return (
-    <section className={`section section--alt ${styles.section}`} aria-labelledby="beauty-title">
+    <section className="section section--alt" aria-labelledby="beauty-title">
       <div className="container">
         <p className="section-label">DEFINITION</p>
         <h2 id="beauty-title" className="section-title">BALが考える「美脚」とは</h2>
