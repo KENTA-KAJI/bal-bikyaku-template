@@ -27,13 +27,20 @@ export default function SectionConversion() {
       >
         <span className={styles.title}>美脚指導のテンプレート</span>
         <strong className={styles.action}>
-          {ended
-            ? "今回の募集は終了しました"
-            : open
-              ? "【定員10名】今すぐ申し込む"
-              : "7月29日（水）10:00 募集開始"}
+          {ended ? (
+            <span>今回の募集は終了しました</span>
+          ) : open ? (
+            <>
+              <span className={styles.urgent}>【定員10名】</span>
+              <span>今すぐ申し込む</span>
+            </>
+          ) : (
+            <>
+              <span className={styles.urgent}>7月29日（水）</span>
+              <span>10:00 募集開始</span>
+            </>
+          )}
         </strong>
-        <span className={styles.arrow} aria-hidden="true">→</span>
       </a>
     </aside>
   );
