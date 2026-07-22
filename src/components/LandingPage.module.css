@@ -563,6 +563,25 @@
 .studioBadge {
   margin-bottom: 0.7rem;
 }
+.studioBenefits {
+  display: grid;
+  gap: 0.35rem;
+  margin-top: 1.25rem;
+  padding: 1rem;
+  border: 1px solid rgba(199, 165, 106, 0.48);
+  background: rgba(0, 0, 0, 0.18);
+  line-height: 1.6;
+}
+.studioBenefits p {
+  font-size: 0.9rem;
+}
+.studioBenefits strong {
+  color: #f1d398;
+  font-size: 1rem;
+}
+.studioBenefits small {
+  color: #d6d1c7;
+}
 .studioJoinLink {
   display: block;
   margin-top: 1.25rem;

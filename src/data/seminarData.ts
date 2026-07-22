@@ -66,6 +66,7 @@ export const seminarData = {
   // ----------------------------------------
   contactEmail: "info@bal-okinawa.jp",
   contactLine: "https://lin.ee/yesSF0bI",
+  studioUrl: "https://bal-studio.hp.peraichi.com/",
 
   // ----------------------------------------
   // 講師プロフィール

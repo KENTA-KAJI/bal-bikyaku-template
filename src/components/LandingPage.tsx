@@ -634,13 +634,21 @@ export default function LandingPage() {
               BAL
               STUDIO会員価格でお申し込みの場合、申込情報と会員登録情報を確認させていただきます。
             </small>
+            <div className={styles.studioBenefits}>
+              <p>600本以上の動画コンテンツを視聴可能</p>
+              <p>BAL STUDIO 月額12,800円</p>
+              <strong>
+                入会＋セミナーでも一般価格より9,200円お得
+              </strong>
+              <small>初月合計56,800円</small>
+            </div>
             <a
               className={styles.studioJoinLink}
-              href={seminarData.contactLine}
+              href={seminarData.studioUrl}
               target="_blank"
               rel="noopener noreferrer"
             >
-              BAL STUDIO入会についてLINEで相談する
+              BAL STUDIOについて詳しく見る
             </a>
           </article>
         </div>
