@@ -51,11 +51,11 @@ export default function InterviewVideo({ youtubeUrl }: InterviewVideoProps) {
             />
           </div>
         ) : (
-          <div className={styles.placeholder} aria-label="動画は2026年7月27日公開予定">
+          <div className={styles.placeholder} aria-label="動画は2026年7月28日公開予定">
             <div className={styles.placeholderInner}>
               <span className={styles.placeholderIcon} aria-hidden="true">▷</span>
               <p className={styles.placeholderEyebrow}>COMING SOON</p>
-              <p className={styles.placeholderText}>2026年7月27日 公開予定</p>
+              <p className={styles.placeholderText}>2026年7月28日 公開予定</p>
               <p className={styles.placeholderNote}>
                 渡辺慶輔先生へのインタビュー動画を<br />
                 こちらに掲載します。
